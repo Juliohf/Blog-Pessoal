@@ -2,6 +2,7 @@ package com.generation.blogpessoal.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -21,6 +22,7 @@ public class Usuario {
     @NotNull(message = "O Atributo nome é obrigatório")
     private String nome;
 
+    @Schema(example = "email@email.com.br")
     @NotNull(message = "O Atributo Usuário é obrigatório")
     @Email(message = "O Atributo Usuario deve ser um email valido")
     private String usuario;
